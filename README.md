@@ -7,7 +7,7 @@
 ### Description:
 simple and clean LobbyCore for PocketMine-MP Servers.
 
-### Planned and finshed features:
+### Planned and finished features:
 - [ ] Commands
     - [ ] /info
     - [ ] /hub
