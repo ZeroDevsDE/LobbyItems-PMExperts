@@ -10,7 +10,7 @@ simple and clean LobbyCore for PocketMine-MP Servers.
 ### Planned and finished features:
 - [ ] Commands
     - [ ] /info
-    - [ ] /hub
+    - [x] /hub
     - [ ] /lobby
     - [ ] /lihelp
 - [ ] Api's
@@ -21,7 +21,7 @@ simple and clean LobbyCore for PocketMine-MP Servers.
     - [x] Plugin prefix
     - [ ] Permission System
     - [x] addon Plugin
-    - [ ] Config File
+    - [x] Config File
 - [ ] Fun Addons
     - [ ] Player Size
     - [ ] NickNames
