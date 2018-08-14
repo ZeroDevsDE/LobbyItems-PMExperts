@@ -2,9 +2,6 @@
 
 namespace PMExpert;
 
-use inventory\invmenu\InvMenu;
-use inventory\invmenu\InvMenuHandler;
-
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat as Color;
