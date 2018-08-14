@@ -6,3 +6,11 @@ api:
 - 4.0.0
 version: 0.0.1
 author: PMExpert
+commands:
+  hub:
+    description: Back to Hub
+    alias: [Hub]
+  lobby:
+    description: Back to Lobby
+    alias: [Lobby]
+   
