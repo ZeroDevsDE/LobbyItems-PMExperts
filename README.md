@@ -15,7 +15,6 @@ Simple and clean LobbyCore for PocketMine-MP Servers.
     - [ ] /lihelp
 - [ ] Api's
     - [ ] Cosmetics
-    - [ ] UIs*
 - [ ] other functions
     - [ ] multilang system
     - [x] Plugin prefix
@@ -25,11 +24,10 @@ Simple and clean LobbyCore for PocketMine-MP Servers.
 - [ ] Fun Addons
     - [ ] Player Size
     - [ ] NickNames
-* *UI's: planned feature, not implemented yet!
 
 ### Next TODO:
 - add Items
-- add InventoryUI
+- add Permission System
 
 # Addons:
 
