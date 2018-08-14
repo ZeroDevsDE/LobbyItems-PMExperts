@@ -28,8 +28,8 @@ simple and clean LobbyCore for PocketMine-MP Servers.
 * *UI's: planned feature, not implemented yet!
 
 ### Next TODO:
-- start coding
 - add Items
+- add InventoryUI
 
 # Addons:
 
