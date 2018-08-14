@@ -4,15 +4,15 @@ api:
 - 3.0.0
 - 3.0.7
 - 4.0.0
-version: 0.0.1
+version: 0.0.3
 author: PMExpert
 commands:
   hub:
     description: Back to Hub
-    alias: [Hub]
+    aliases: [Hub]
   lobby:
     description: Back to Lobby
-    alias: [Lobby]
+    aliases: [Lobby]
 permissions:
    lobby.*:
      description: Allow to use all Functions
