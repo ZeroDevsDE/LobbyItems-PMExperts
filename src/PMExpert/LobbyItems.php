@@ -18,8 +18,8 @@ class LobbyItems extends PluginBase implements Listener {
 		$this->getLogger->info($this->prefix . "\nAddon geladen");
 		$this->config = $this->getConfig();
 		$this->config = new Config($this->getDataFolder()."settings.yml", Config::YAML, [
-		  "IP" => "",
-		  "Port" => ,
+		  "IP" => "127.0.0.1",
+		  "Port" => 19132,
 		]);
 		}
 		
@@ -30,6 +30,11 @@ class LobbyItems extends PluginBase implements Listener {
     	$ip = $this->config->get("IP");
         $port = $this->config->get("Port");
         $sender->transfer($ip, $port);
+    }
+    if($command->getName === "lobby"){
+    $ip = $this->config->get("IP");
+    $port = $this->config->get("Port");
+    $sender->transfer($ip, $port);
     }
     }
 	}
