@@ -22,6 +22,7 @@ class LobbyItems extends PluginBase implements Listener {
 		  "Port" => ,
 		]);
 		}
+		
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
     	$this->config = $this->getConfig();
         $this->config = new Config($this->getDataFolder() . "settings.yml", Config::YAML);
@@ -29,7 +30,6 @@ class LobbyItems extends PluginBase implements Listener {
     	$ip = $this->config->get("IP");
         $port = $this->config->get("Port");
         $sender->transfer($ip, $port);
-        
     }
     }
 	}
