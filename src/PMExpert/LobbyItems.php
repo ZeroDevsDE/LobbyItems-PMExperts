@@ -2,8 +2,8 @@
 
 namespace PMExpert;
 
-use muqsit\invmenu\InvMenu;
-use muqsit\invmenu\InvMenuHandler;
+use inventory\invmenu\InvMenu;
+use inventory\invmenu\InvMenuHandler;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
