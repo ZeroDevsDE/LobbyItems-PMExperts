@@ -5,13 +5,13 @@
 [![Discord](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/M7aQfm) |
 
 ### Description:
-simple and clean LobbyCore for PocketMine-MP Servers.
+Simple and clean LobbyCore for PocketMine-MP Servers.
 
 ### Planned and finished features:
 - [ ] Commands
     - [ ] /info
     - [x] /hub
-    - [ ] /lobby
+    - [x] /lobby
     - [ ] /lihelp
 - [ ] Api's
     - [ ] Cosmetics
