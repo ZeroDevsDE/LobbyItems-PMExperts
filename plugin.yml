@@ -13,4 +13,7 @@ commands:
   lobby:
     description: Back to Lobby
     alias: [Lobby]
+permissions:
+   lobby.*:
+     description: Allow to use all Functions
    
