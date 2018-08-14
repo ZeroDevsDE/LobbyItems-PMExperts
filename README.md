@@ -18,7 +18,7 @@ simple and clean LobbyCore for PocketMine-MP Servers.
     - [ ] UIs*
 - [ ] other functions
     - [ ] multilang system
-    - [ ] Plugin prefix
+    - [x] Plugin prefix
     - [ ] Permission System
     - [x] addon Plugin
     - [ ] Config File
