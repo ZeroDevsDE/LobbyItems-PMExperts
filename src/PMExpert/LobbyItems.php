@@ -20,6 +20,7 @@ class LobbyItems extends PluginBase implements Listener {
 		$this->config = new Config($this->getDataFolder()."settings.yml", Config::YAML, [
 		  "IP" => "127.0.0.1",
 		  "Port" => 19132,
+		  "Compass" => UI,
 		]);
 		}
 		
