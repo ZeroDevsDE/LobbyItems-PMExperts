@@ -1,0 +1,8 @@
+name: LobbyItems
+main: PMExpert\LobbyItems
+api:
+- 3.0.0
+- 3.0.7
+- 4.0.0
+version: 0.0.1
+author: PMExpert
