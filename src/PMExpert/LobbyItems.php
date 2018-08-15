@@ -82,7 +82,7 @@ class LobbyItems extends PluginBase implements Listener {
     public function mainItems(Player $player) {
     $compass = Item::get(345, 0, 1);
     $compass->setCustomName(Color::GRAY . "[" . Color::GREEN . "Compass" . Color::GRAY . "]");
-    $player->getInventory->setItem(0, $compass);
+    $player->getInventory()->setItem(0, $compass);
     }
     
     public function onJoin(PlayerJoinEvent $event) {
