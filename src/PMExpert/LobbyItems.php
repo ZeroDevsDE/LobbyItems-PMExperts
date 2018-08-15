@@ -8,12 +8,16 @@ use pocketmine\utils\TextFormat as Color;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\Config;
+use pocketmine\Player;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\item\Item;
 
 class LobbyItems extends PluginBase implements Listener {
 	public $prefix = Color::GRAY . "» " . Color::RED . Color::BOLD . "LobbyItems". Color::RESET . Color::GRAY . " » ";
 	
 	public function onEnable() {
 		$this->getLogger()->info($this->prefix . "\nAddon geladen");
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->config = $this->getConfig();
 		$this->config = new Config($this->getDataFolder()."settings.yml", Config::YAML, [
 		  "IP" => "91.200.100.50",
@@ -74,9 +78,15 @@ class LobbyItems extends PluginBase implements Listener {
     }
     return false;
     }
+    
     public function mainItems(Player $player) {
-    $compass = Item:get(345 , 0, 1);
+    $compass = Item::get(345, 0, 1);
     $compass->setCustomName(Color::GRAY . "[" . Color::GREEN . "Compass" . Color::GRAY . "]");
-    $player->setItem(0, $compass);
+    $player->getInventory->setItem(0, $compass);
+    }
+    
+    public function onJoin(PlayerJoinEvent $event) {
+    	$player = $event->getPlayer();
+    	$this->mainItems($player);
     }
 	}
