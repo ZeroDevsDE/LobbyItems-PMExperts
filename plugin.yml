@@ -6,3 +6,13 @@ api:
 - 4.0.0
 version: 0.0.3
 author: PMExpert
+commands:
+  hub:
+    description: Back to Hub
+    aliases: [Hub]
+  lobby:
+    description: Back to Lobby
+    aliases: [Lobby]
+permissions:
+  lobby.*:
+    description: Allow to use all Functions off this Plugin
