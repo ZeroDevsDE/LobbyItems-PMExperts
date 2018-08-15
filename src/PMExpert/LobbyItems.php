@@ -18,9 +18,7 @@ class LobbyItems extends PluginBase implements Listener {
 		$this->config = new Config($this->getDataFolder()."settings.yml", Config::YAML, [
 		  "IP" => "91.200.100.50",
 		  "Port" => 19132,
-		  "Compass" => "UI",
 		]);
-		if($this->config->get("Compass") === "UI"){
 			$this->config = new Config($this->getDataFolder()."compass.yml", Config::YAML, [
 			"item0" => 0,
 			"x0" => 0,
@@ -34,10 +32,11 @@ class LobbyItems extends PluginBase implements Listener {
 			"x2" => 0,
 			"y2" => 0,
 			"z2" => 0,
+			"item3" => 0,
+			"x3" => 0,
+			"y3" => 0,
+			"z3" => 0,
 			]);
-			} else if($this->config->get("Compass") === "Hotbar") {
-				
-				}
 		}
 		
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
