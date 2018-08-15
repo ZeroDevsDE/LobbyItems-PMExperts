@@ -26,7 +26,7 @@ Simple and clean LobbyCore for PocketMine-MP Servers.
     - [ ] NickNames
 
 ### Next TODO:
-- add Items
+- add More Items
 - add Permission System
 
 # Addons:
