@@ -1,52 +1,47 @@
 ##Config for the Compass
 
-##Please put at item {0,1,2,3,4,5,6,7,8} the respective item ID of the item you want
+##Please put at item {0,1,2,3,4,5,6,7} the respective item ID of the item you want
 
-##For name {0,1,2,3,4,5,6,7,8} please set the name of the item
+##For name {0,1,2,3,4,5,6,7} please set the name of the item
 
-##Please set the position at x, y, z {0,1,2,3,4,5,6,7,8} where you want to be teleported!
+##Please set the position at x, y, z {0,1,2,3,4,5,6,7} where you want to be teleported!
 item0: 0
-name0: Test
+name0: "Test"
 x0: 0
 y0: 0
 z0: 0
 item1: 0
-name1: Test
+name1: "Test"
 x1: 0
 y1: 0
 z1: 0
 item2: 0
-name2: Test
+name2: "Test"
 x2: 0
 y2: 0
 z2: 0
 item3: 0
-name3: Test
+name3: "Test"
 x3: 0
 y3: 0
 z3: 0
 item4: 0
-name4: Test
+name4: "Test"
 x4: 0
 y4: 0
 z4: 0
 item5: 0
-name5: Test
+name5: "Test"
 x5: 0
 y5: 0
 z5: 0
 item6: 0
-name6: Test
+name6: "Test"
 x6: 0
 y6: 0
 z6: 0
 item7: 0
-name7: Test
+name7: "Test"
 x7: 0
 y7: 0
 z7: 0
-item8: 0
-name8: Test
-x8: 0
-y8: 0
-z8: 0
