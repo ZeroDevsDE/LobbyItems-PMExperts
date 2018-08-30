@@ -100,6 +100,18 @@ class LobbyItems extends PluginBase implements Listener {
     $item3 = Item::get($compass->get("item3"));
     $item3->setCustomName($compass->get("name3"));
     $player->getInventory()->setItem(3, $item3);
+    $item4 = Item::get($compass->get("item4"));
+    $item4->setCustomName($compass->get("name4"));
+    $player->getInventory()->setItem(4, $item4);
+    $item5 = Item::get($compass->get("item5"));
+    $item5->setCustomName($compass->get("name5"));
+    $player->getInventory()->setItem(5, $item5);
+    $item6 = Item::get($compass->get("item6"));
+    $item6->setCustomName($compass->get("name6"));
+    $player->getInventory()->setItem(6, $item6);
+    $item7 = Item::get($compass->get("item7"));
+    $item7->setCustomName($compass->get("name7"));
+    $player->getInventory()->setItem(7, $item7);
     $back = Item::get(372);
     $back->setCustomName(Color::GRAY . "[" . Color::DARK_RED . "Back" . Color::GRAY . "]");
     $player->getInventory()->setItem(8, $back);
@@ -149,8 +161,38 @@ class LobbyItems extends PluginBase implements Listener {
 			$y2 = $compass->get("y2");
 			$z2 = $compass->get("z2");
 			$level = $player->getLevel();
-			$player->teleport(new Position($x2 ,$y2, $z2, $level));
-			}
+			$player->teleport(new Position($x2, $y2, $z2, $level));
+	   } else if($item->getCustomName() === $compass->get("name3")) {
+			$x3 = $compass->get("x3");
+			$y3 = $compass->get("y3");
+			$z3 = $compass->get("z3");
+			$level = $player->getLevel();
+			$player->teleport(new Position($x3, $y3, $z3, $level));
+	   } else if($item->getCustomName() === $compass->get("name4")) {
+			$x4 = $compass->get("x4");
+			$y4 = $compass->get("y4");
+			$z4 = $compass->get("z4");
+			$level = $player->getLevel();
+			$player->teleport(new Position($x4, $y4, $z4, $level));
+	   } else if($item->getCustomName() === $compass->get("name5")) {
+			$x5 = $compass->get("x5");
+			$y5 = $compass->get("y5");
+			$z5 = $compass->get("z5");
+			$level = $player->getLevel();
+			$player->teleport(new Position($x5, $y5, $z5, $level));
+	   } else if($item->getCustomName() === $compass->get("name6")) {
+			$x6 = $compass->get("x6");
+			$y6 = $compass->get("y6");
+			$z6 = $compass->get("z6");
+			$level = $player->getLevel();
+			$player->teleport(new Position($x6, $y6, $z6, $level));
+	   } else if($item->getCustomName() === $compass->get("name7")) {
+			$x7 = $compass->get("x7");
+			$y7 = $compass->get("y7");
+			$z7 = $compass->get("z7");
+			$level = $player->getLevel();
+			$player->teleport(new Position($x7, $y7, $z7, $level));
+	   }
 		
 		}
 		}
