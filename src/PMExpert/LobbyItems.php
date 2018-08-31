@@ -197,7 +197,9 @@ class LobbyItems extends PluginBase implements Listener {
 			$z7 = $compass->get("z7");
 			$level = $player->getLevel();
 			$player->teleport(new Position($x7, $y7, $z7, $level));
-	   }
+	   } else if($item->getCustomName() === Color::GRAY . "[" . Color::GREEN . "Player visible" . Color::GRAY . "]") {
+	
+		}
 		
 		}
 	public function onPlace(BlockPlaceEvent $event) {
