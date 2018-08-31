@@ -16,17 +16,13 @@ Simple and clean LobbyCore for PocketMine-MP Servers.
 - [ ] Api's
     - [ ] Cosmetics
 - [ ] other functions
-    - [ ] multilang system
+    - [ ] multilang system(?)
     - [x] Plugin prefix
     - [ ] Permission System
     - [x] addon Plugin
     - [x] Config File
-- [ ] Fun Addons
-    - [ ] Player Size
-    - [ ] NickNames
 
 ### Next TODO:
-- add More Items
 - add Permission System
 
 # Addons:
