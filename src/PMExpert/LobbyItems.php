@@ -114,7 +114,7 @@ class LobbyItems extends PluginBase implements Listener {
     $item7 = Item::get($compass->get("item7"));
     $item7->setCustomName($compass->get("name7"));
     $player->getInventory()->setItem(7, $item7);
-    $back = Item::get(372);
+    $back = Item::get(372, 0, 1);
     $back->setCustomName(Color::GRAY . "[" . Color::DARK_RED . "Back" . Color::GRAY . "]");
     $player->getInventory()->setItem(8, $back);
     
