@@ -127,7 +127,7 @@ class LobbyItems extends PluginBase implements Listener {
     $player->getInventory()->setItem(0, $compass);
     $hider = Item::get(351, 10, 1);
     $hider->setCustomName(Color::GRAY . "[" . Color::GREEN . "Player visible" . Color::GRAY . "]");
-    $player->getInventory()->setIten(2, $hider);
+    $player->getInventory()->setItem(2, $hider);
     }
     
     public function onJoin(PlayerJoinEvent $event) {
