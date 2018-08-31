@@ -12,6 +12,8 @@ use pocketmine\Player;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerRespawnEvent;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\item\Item;
 use pocketmine\level\Position;
 
@@ -194,5 +196,11 @@ class LobbyItems extends PluginBase implements Listener {
 			$player->teleport(new Position($x7, $y7, $z7, $level));
 	   }
 		
+		}
+	public function onPlace(BlockPlaceEvent $event) {
+		$event->setCancelled(true);
+		}
+	public function onBreak(BlockBreakEvent $event) {
+		$event->setCancelled(true);
 		}
 		}
