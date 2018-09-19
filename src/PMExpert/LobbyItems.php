@@ -198,7 +198,7 @@ class LobbyItems extends PluginBase implements Listener {
 			$level = $player->getLevel();
 			$player->teleport(new Position($x7, $y7, $z7, $level));
 	   } else if($item->getCustomName() === Color::GRAY . "[" . Color::GREEN . "Player visible" . Color::GRAY . "]") {
-	      
+	      $player->hidePlayer($player);
 		}
 		
 		}
