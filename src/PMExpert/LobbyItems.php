@@ -4,7 +4,7 @@ namespace PMExpert;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\utils\TextFormat as Color;
+use pocketmine\utils\TextFormat as LI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\Config;
@@ -18,12 +18,20 @@ use pocketmine\item\Item;
 use pocketmine\level\Position;
 
 class LobbyItems extends PluginBase implements Listener {
-	public $prefix = Color::GRAY . "» " . Color::RED . Color::BOLD . "LobbyItems". Color::RESET . Color::GRAY . " » ";
+	public $prefix = LI::GRAY . "» " . LI::RED . LI::BOLD . "LobbyItems". LI::RESET . LI::GRAY . " » ";
 	
 	public function onEnable() {
 		$this->saveResource("compass.yml");
 		$this->saveResource("settings.yml");
-		$this->getLogger()->info("\n" . $this->prefix . "Addon geladen");
+        $this->getLogger()->info(LI::GREEN . "LobbyItems was enabled!");
+		$ServerHelper = $this->getServer()->getPluginManager()->getPlugin("Server-Helper");
+		if($ServerHelper == true){
+		    $this->getLogger()->info(LI::GREEN . "Addon found: §7ServerHelper");
+        }
+        if($ServerHelper == null){
+            $this->getLogger()->info(LI::RED . "No Addon was found!");
+            $this->getLogger()->info(LI::GREEN . "please install Server-Helper plugin!");
+        }
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$settings = new Config($this->getDataFolder()."settings.yml", Config::YAML, [
 		  "IP" => "91.200.100.50",
@@ -115,7 +123,7 @@ class LobbyItems extends PluginBase implements Listener {
     $item7->setCustomName($compass->get("name7"));
     $player->getInventory()->setItem(7, $item7);
     $back = Item::get(372, 0, 1);
-    $back->setCustomName(Color::GRAY . "[" . Color::DARK_RED . "Back" . Color::GRAY . "]");
+    $back->setCustomName(LI::GRAY . "[" . LI::DARK_RED . "Back" . LI::GRAY . "]");
     $player->getInventory()->setItem(8, $back);
     
     }
@@ -123,10 +131,10 @@ class LobbyItems extends PluginBase implements Listener {
     public function mainItems(Player $player) {
     $player->getInventory()->clearAll();
     $compass = Item::get(345, 0, 1);
-    $compass->setCustomName(Color::GRAY . "[" . Color::BLUE . "Compass" . Color::GRAY . "]");
+    $compass->setCustomName(LI::GRAY . "[" . LI::BLUE . "Compass" . LI::GRAY . "]");
     $player->getInventory()->setItem(0, $compass);
     $hider = Item::get(351, 10, 1);
-    $hider->setCustomName(Color::GRAY . "[" . Color::GREEN . "Player visible" . Color::GRAY . "]");
+    $hider->setCustomName(LI::GRAY . "[" . LI::GREEN . "Player visible" . LI::GRAY . "]");
     $player->getInventory()->setItem(2, $hider);
     }
     
@@ -145,9 +153,9 @@ class LobbyItems extends PluginBase implements Listener {
         $compass = new Config($this->getDataFolder()."compass.yml", Config::YAML);
 		$player = $event->getPlayer();
 		$item = $player->getInventory()->getItemInHand();
-		if($item->getCustomName() === Color::GRAY . "[" . Color::GREEN . "Compass" . Color::GRAY . "]") {
+		if($item->getCustomName() === LI::GRAY . "[" . LI::GREEN . "Compass" . LI::GRAY . "]") {
 			$this->games($player);
-		} else if($item->getCustomName() === Color::GRAY . "[" . Color::DARK_RED . "Back" . Color::GRAY . "]") {
+		} else if($item->getCustomName() === LI::GRAY . "[" . LI::DARK_RED . "Back" . LI::GRAY . "]") {
 			$this->mainItems($player);
 		} else if($item->getCustomName() === $compass->get("name0")) {
 			$x0 = $compass->get("x0");
@@ -197,7 +205,7 @@ class LobbyItems extends PluginBase implements Listener {
 			$z7 = $compass->get("z7");
 			$level = $player->getLevel();
 			$player->teleport(new Position($x7, $y7, $z7, $level));
-	   } else if($item->getCustomName() === Color::GRAY . "[" . Color::GREEN . "Player visible" . Color::GRAY . "]") {
+	   } else if($item->getCustomName() === LI::GRAY . "[" . LI::GREEN . "Player visible" . LI::GRAY . "]") {
 	      $player->hidePlayer($player);
 		}
 		
